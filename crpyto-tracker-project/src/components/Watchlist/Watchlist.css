@@ -1,0 +1,156 @@
+.watchlist-section{
+    width: 100%;
+}
+
+
+.watchlist-section .long-container{
+    max-width: 74rem;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--primary-bg);
+    margin: 0 auto;
+}
+
+.watchlist-section .long-container .watchlist-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.watchlist-section .long-container .new-list-container{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: var(--secondary-bg);
+    margin: 20px 0;
+    color: white;
+}
+
+.watchlist-section .long-container .new-list-container:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.watchlist-section .long-container .new-list-container p{
+    margin-left: 10px;
+}
+.watchlist-section .watchlist-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    height: fit-content;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    max-height: 84vh;
+}
+ 
+
+.watchlist-section .watchlist-container .watchlist-card{
+    background-color: rgb(63, 85, 184);
+    border-radius: 10px;
+    box-shadow: 0 2.5px 15px rgb(109, 121, 173);
+    height: 420px;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px;
+    overflow: hidden;
+
+}
+.watchlist-section .watchlist-container .watchlist-card::-webkit-scrollbar{
+    display: none;
+}
+.watchlist-card .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid silver;
+    cursor: default;
+}
+
+.watchlist-card .card-header .add-coin-btn.icon-btn{
+    color: white;
+}
+
+
+.watchlist-section .watchlist-header .edit-container{
+    position: relative;
+}
+
+.watchlist-section .edit-container .icon-btn{
+    color: white;
+    background-color: var(--secondary-bg);
+}
+
+.watchlist-section .watchlist-header .edit-container .edit-dropdown{
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    background-color: grey;
+    right: 0px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px 0;
+}
+
+.watchlist-section .watchlist-header .edit-container .edit-dropdown p{
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.watchlist-section .watchlist-header .edit-container .edit-dropdown p:hover{
+    cursor: pointer;
+    background-color: rgba(107, 106, 106, 0.8);
+}
+
+.watchlist-card .card-header i:hover,
+.watchlist-section .watchlist-container .watchlist-card:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: ease-in-out 0.3s;
+}
+
+.watchlist-body .watchlist-container::-webkit-scrollbar{
+    display: none;
+}
+
+.watchlist-card .card-body{
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 349px;
+}
+.watchlist-card .card-body::-webkit-scrollbar{
+    display: none;
+}
+.watchlist-card .card-body table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.watchlist-card .card-body .crypto-list-item{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+    border-bottom: 1px solid silver;
+    align-items: center;
+}
+.watchlist-card .card-body .crypto-list-item .watchlist-crypto-img {
+    width: 5px;
+}
+.watchlist-card .card-body .crypto-list-item .watchlist-crypto-img img{
+    max-width: 25px;
+}
+.watchlist-card .card-body .crypto-list-item td{
+    width: 20%;
+}
+

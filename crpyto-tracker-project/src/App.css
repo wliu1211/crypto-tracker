@@ -1,0 +1,66 @@
+*,
+:before,
+:after{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root{
+  --primary-bg: rgb(22, 22, 22);
+  --secondary-bg: #236BD6;
+  --money: rgb(141,198,71);
+  --blood: rgb(234,57,67);
+}
+.App{
+  background-color: var(--primary-bg);
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+.app-header{
+  display: flex;
+  border-bottom: 1px solid grey;
+}
+.app-header .app-title{
+  padding: 15px 0;
+}
+.app-header .app-title h3{
+  color: rgb(0, 153, 255);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 15px;
+
+}
+.main-display-container{
+  display: flex;
+  height: 92vh;
+}
+.side-nav{
+  height: 100%;
+  width: 90px;
+  border-right: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+.side-nav .nav-item-container i{
+  height: 80px;
+  width: 88px;
+  color: rgb(185, 184, 184);
+  font-size: 1.5rem;
+  background-color: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-nav .nav-item-container i.selected{
+  background-color: rgb(35, 107, 214);
+  color: white;
+}
+.side-nav .nav-item-container:hover i{
+  color: white;
+  transition: ease-in-out 0.3s;
+
+  cursor: pointer;
+}

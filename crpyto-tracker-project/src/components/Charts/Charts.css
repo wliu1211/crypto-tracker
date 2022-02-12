@@ -1,0 +1,499 @@
+.charts-section{width: 100%;}
+
+.charts-section .long-container{
+    max-width: 86rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-bg);
+    margin: 0 auto;
+}
+.grid-header{
+    height: 200px;
+    grid-area: header;
+    /* max-width: 800px; */
+    display: flex;
+    align-items: center;
+}
+.grid-chart{
+    height: 455px;
+    display: flex;
+    /* max-width: 800px; */
+    grid-area: chart;
+}
+.grid-watchlist{
+    grid-area: watchlist;
+}
+.grid-stats{
+    grid-area: stats;
+}
+.grid-footer{
+    height: 205px;
+    grid-area: footer;
+}
+
+
+.charts-section .grid-container{
+    display: grid;
+    grid-template: 
+    'header header watchlist watchlist'
+    'chart chart watchlist watchlist'
+    'chart chart stats stats'
+    'footer footer stats stats'
+    ;
+    grid-gap: -3px;
+    background-color: var(--primary-bg);
+    padding: 2px;
+    padding-top: 1px;
+    height: 100%;
+}
+.charts-section .grid-container >div{
+    border: 1px solid grey;
+}
+
+/* Chart header */
+.grid-header .header-wrapper{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.grid-header .header-left{
+    margin: auto 0;
+    padding: 0 10px;
+}
+
+.grid-header .header-right .header-right-header .header-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    position: relative;
+}
+.header-right-header .header-container .scale .outer-scale{
+    width: 300px;
+    height: 10px;
+    background-color: rgb(77, 77, 77);
+    border-radius: 20px;
+    margin: 0 20px;
+    overflow-x: hidden;
+}
+.header-right-header .header-container .scale .inner-scale{
+    width: 2%;
+    height: 10px;
+    background-color: rgb(35,107,214);
+    z-index: 10;
+    transition: ease-in-out 0.3s;
+}
+.header-right-header .header-container .high{
+    margin-right: 20px;
+}
+
+.header-right-header .header-container .options-container{
+    position: relative;
+
+}
+
+.header-right-header .header-container .options{
+    background-color: grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-right-header .header-container .dropdown{
+    position: absolute;
+    width: 120px;
+    background-color: grey;
+    top: 31px;
+    border-radius: 0 0 10px 10px;
+    left: -0;
+    padding-bottom: 6px;
+}
+
+.header-right-header .header-container .dropdown p{
+    padding: 5px 10px;
+}
+
+.header-right-header .header-container .options:hover,
+.header-right-header .header-container .dropdown p:hover{
+    cursor: pointer;
+    background-color: rgba(107, 106, 106, 0.8);
+}
+
+
+
+.grid-header .header-right .header-right-body{
+    display: flex;
+    border-left: 1px solid grey;
+}
+.grid-header .header-right .header-right-body .right-items{
+    height: 135px;
+    width: 175px;
+    border-right: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.grid-header .header-right .header-right-body .right-items .item-value{
+    margin: 5px 0 10px;
+}
+
+.header-right-body .right-items .market-cap-change-container{
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+}
+.header-right-body .right-items .market-cap-change-container p{
+    margin-left: 10px;
+}
+
+
+.grid-header .header-left .header-rank{
+    background-color: rgb(35,107,214);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.grid-header .header-left .header-coin{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.grid-header .header-left .header-coin img{
+    max-width: 50px;
+}
+
+.grid-header .header-left .header-price-container{
+    display: flex;
+}
+.grid-header .header-left .header-price{
+    font-size: 1.75rem;
+}
+
+.grid-header .header-left .header-price-container .percent-container{
+    display: flex;
+    width: 70px;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    padding: 5px 40px;
+    margin-left: 30px;
+}
+.grid-header .header-left .header-price-container .percent-container p{
+    margin-left: 10px;
+}
+
+
+/* Chart Map */
+
+.grid-chart .chart-outer-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.chart-outer-container .chart-setting-container .measure-type-container{
+    display: flex;
+    margin: 20px 0;
+    border: 1px solid grey;
+    border-right: none;
+}
+
+.chart-outer-container .chart-setting-container .measure-type-container p{
+    padding: 5px 10px;
+    border-right: 1px solid grey;
+}
+
+.chart-outer-container .chart-setting-container .measure-type-container p:hover,
+.chart-setting-container .time-setting-grid-container .grid-item:hover,
+.chart-outer-container .chart-setting-container .chart-style-container span:hover{
+    cursor: pointer;
+    background-color: rgba(107, 106, 106, 0.8);
+}
+
+
+.chart-outer-container .chart-setting-container .time-setting-grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px solid grey;
+    
+}
+
+.chart-setting-container .time-setting-grid-container .grid-item{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.chart-outer-container .chart-setting-container .chart-style-container{
+    border: 1px solid grey;
+    width: fit-content;
+    margin: 20px 0;
+
+}
+.chart-outer-container .chart-setting-container .chart-style-container span{
+    padding: 10px;
+    border: 1px solid grey;
+    
+}
+
+.highcharts-candlestick-series .highcharts-point {
+    stroke: var(--blood);
+    fill: var(--blood);
+}
+
+.highcharts-candlestick-series .highcharts-point-up {
+    stroke: var(--money);
+    fill: var(--money);
+}
+
+
+/* Chart List */
+.grid-watchlist .list-container{
+    max-width: 475px;
+}
+
+.grid-watchlist .list-container .list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position: relative;
+}
+
+
+.grid-watchlist .list-container .list-header .watchlist-dropdown{
+    width: 180px;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    border-radius: 10px;
+    background-color: grey;
+    padding: 7px 0;
+    z-index: 100;
+
+}
+
+.grid-watchlist .list-container .list-header .header-right{
+    display: flex;
+    align-items: center;
+}
+.grid-watchlist .list-container .list-header .header-right .add-coin-btn{
+    color: white;
+    background-color: grey;
+    margin-right: 20px;
+}
+.grid-watchlist .list-container .list-header .watchlist-dropdown p{
+    padding: 5px 10px;
+}
+
+.grid-watchlist .list-container .list-header .watchlist-switcher,
+.grid-watchlist .list-container .list-header .watchlist-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    background-color: grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 20px;
+    color: white;
+    text-transform: none;
+}
+.grid-watchlist .list-container .list-header .watchlist-switcher:hover,
+.grid-watchlist .list-container .list-header .watchlist-container:hover,
+.grid-watchlist .list-container .list-header .watchlist-dropdown p:hover{
+    cursor: pointer;
+    background-color: rgba(107, 106, 106, 0.8);
+}
+
+.grid-watchlist .list-container .list-header .watchlist-switcher p{
+    margin-right: 10px;
+}
+
+.grid-watchlist .list-container .list-header .watchlist-container p{
+    margin-left: 5px;
+}
+
+.grid-watchlist .list-container .list-body .body-body{
+    overflow-y: scroll;
+    height: 300px;
+    font-size: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+
+.grid-watchlist .list-container .list-body .body-body::-webkit-scrollbar{
+    display: none;
+}
+
+
+.grid-watchlist .list-container .list-body .body-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: underline;
+    padding: 5px 15px;
+}
+
+.grid-watchlist .list-container .list-body .list-item-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+
+}
+
+.grid-watchlist .list-container .list-body .list-item-container:hover{
+    background-color: rgba(109, 109, 109, 0.5);
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.grid-watchlist .list-container .list-body .list-item-container .list-left{
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+
+.grid-watchlist .list-container .list-body .list-item-container .item-name{
+    display: flex;
+}
+
+.grid-watchlist .list-container .list-body .list-item-container .item-name img{
+    max-width: 20px;
+    margin-right: 5px;
+}
+
+.grid-watchlist .list-container .list-body .list-item-container .list-right{
+    display: flex;
+}
+.grid-watchlist .list-container .list-body .list-item-container .list-right > div{
+    width: fit-content;
+    text-align: right;
+}
+.grid-watchlist .list-container .list-body .list-item-container .list-right .chg-percent-container{
+    width: 90px;
+}
+
+.grid-watchlist .empty-list-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-watchlist .empty-list-container .add-coin-btn{
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+    background-color: var(--secondary-bg);
+
+}
+.grid-watchlist .empty-list-container .add-coin-btn p{
+    margin-left: 10px;
+}
+/* Chart Stats */
+.grid-stats .stats-container{
+    padding: 10px;
+}
+
+.grid-stats .stats-container .stats-header{
+    margin-bottom: 10px;
+}
+.grid-stats .stats-container .stats-body{
+    overflow-y: scroll;
+    height: 360px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.grid-stats .stats-container .stats-body::-webkit-scrollbar{
+    display: none;
+}
+
+.grid-stats .stats-container .stats-body .stats-item-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+}
+
+.stats-body .stats-item-container .all-time-container{
+    text-align: right;
+}
+
+
+/* Chart Footer */
+
+.grid-footer{
+    width: 100%;
+}
+
+.grid-footer .footer-container{
+    height: 150px;
+    margin: 30px auto;
+    width: fit-content;
+}
+.grid-footer .footer-container > h3{
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.footer-container .converter-container,
+.footer-container .converter-container .crypto-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container .converter-container .swap-container{
+    margin: 0 10px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-bg);
+}
+
+.footer-container .converter-container .swap-container:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+
+.footer-container .converter-container .converter-name{
+    font-size: 1.25rem;
+    margin: 0 0 0 10px;
+    width: 100px;
+}
+
+
+.footer-container .converter-container .crypto-container img{
+    max-width: 70px;
+    border-radius: 50%;
+}
+.footer-container .converter-container .crypto-container input{
+    font-size: 1.25rem;
+    text-align: right;
+    background-color: var(--primary-bg);
+    border: none;
+    color: white;
+    width: 250px;
+}
+
+.footer-container .converter-container .crypto-container input:focus{
+    outline: none;
+}

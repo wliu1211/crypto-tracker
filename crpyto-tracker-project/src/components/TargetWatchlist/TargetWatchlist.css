@@ -1,0 +1,91 @@
+.target-list-container{
+    width: 100%;
+}
+
+.target-list-container .long-container{
+    max-width: 86rem;
+    width: 100%;
+    height: 100%;
+    max-height: 50rem;
+    background-color: var(--primary-bg);
+}
+.target-list-container .long-container table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+
+}
+.target-list-container .long-container .coin-row.header{
+    background-color: rgb(35,107,214);
+    position: sticky;
+    top: 0;
+}
+
+.target-list-container .long-container .coin-row td{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+
+.target-list-container .target-list-table .img-ticker-container {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: flex-start;
+    margin-left: 10px;
+    
+}
+.target-list-container .target-list-table tbody .img-ticker-container{
+    transform: translateY(10px);
+
+}
+.target-list-container .target-list-table .img-ticker-container img{
+    max-width: 50px;
+    margin-left: 20px;
+}
+
+.target-list-container .name-container{
+    width: 125px;
+}
+
+.target-list-container .name-container p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.target-list-container .movement-container{
+    width: 200px;
+    text-align: center;
+}
+.target-list-container .price-container{
+    text-align: right;
+}
+.target-list-container .change-container{
+    text-align: right;
+    width: 125px;
+}
+.target-list-container .percent-container{
+    text-align: right;
+}
+.target-list-container .low-high-container{
+    text-align: right;
+}
+.target-list-container .volume-container{
+    text-align: right;
+    padding-right: 20px;
+}
+
+
+.target-list-container .back-btn{
+    margin-top: 20px;
+    background: var(--secondary-bg);
+    font-size: 1.2rem;
+    color: white;
+}
+.target-list-container .back-btn p{
+    margin-left: 10px;
+    width: fit-content;
+}
+.target-list-container .back-btn:hover{
+    background: var(--secondary-bg);
+
+}

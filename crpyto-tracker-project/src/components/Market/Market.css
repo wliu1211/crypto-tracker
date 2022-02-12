@@ -1,0 +1,272 @@
+
+.long-container{
+    max-width: 86rem;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--primary-bg);
+    margin: 0 auto;
+}
+
+.long-container .market-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.market-header-container .search-container input{
+    padding: 7px;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: none;
+}
+.market-header-container .search-container input:focus {
+    outline: none;
+}
+
+.market-header-container .search-container button{
+    font-size: 1.2rem;
+    border: none;
+    background-color: rgb(35,107,214);
+    color: white;
+    border-radius: 50%;
+}
+.market-header-container .search-container button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+
+}
+
+
+
+.market-header-container .create-watchlist-container .create-watchlist-btn{
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(35,107,214);
+    color: white;
+    font-size: 1.25rem;
+    margin-right: 30px;
+}
+
+
+.market-header-container .create-watchlist-container .create-watchlist-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+
+.market-header-container .create-watchlist-container .create-watchlist-btn i{
+    margin-right: 10px;
+}
+
+
+.table-scroll {
+    margin-top: 15px;
+    height: 80vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+
+  .table-scroll::-webkit-scrollbar{
+    display: none;
+}
+.crypto-info-table{
+    border-collapse: collapse;
+    position: relative;
+}
+.crypto-info-table thead{
+    position: sticky;
+    top: -1px;
+    z-index: 100;
+
+}
+
+.crypto-info-table .crypto-info-header{
+    padding: 0 100px;
+    background-color: rgb(35,107,214);
+    border-top: 1px solid rgb(109, 109, 109);
+    border-bottom: 1px solid rgb(109, 109, 109);
+    
+}
+.crypto-info-table .crypto-info-header th{
+    padding: 10px 40px;
+    font-size: 1.25rem;
+    text-align: right;
+    padding-right: 0;
+    cursor: pointer;
+}
+.loading-screen{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+.crypto-info-table .crypto-info-header .info-rank,
+.crypto-info-table .crypto-info-header .info-name,
+.crypto-info-table .crypto-info-body .info-rank,
+.crypto-info-table .crypto-info-body .info-name{
+    text-align: left;
+}
+.crypto-info-table .crypto-info-header .info-rank{
+    padding: 10px 40px 10px 0;
+    width: 100px;
+    
+}
+.crypto-info-table .crypto-info-header .sort-icon{
+    margin-left: 5px;
+    position: absolute;
+    top: 15px;
+}
+
+/* ITEM ROW */
+.crypto-info-body .info-name .name-container{
+    display: flex;
+    max-width: 250px;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+.crypto-info-body .info-name .name-container div{
+    display: flex;
+    align-items: center;
+}
+.crypto-info-body .info-name .name-container .coin-img-wrapper img{
+    max-width: 25px;
+    margin-right: 10px;
+}
+.crypto-info-body .info-name .name-container .coin-img-wrapper p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    transition: ease-in-out 0.3s;
+}
+
+
+.crypto-info-table .crypto-info-header .info-price,
+.crypto-info-table .crypto-info-body .info-price{
+    padding-left: 100px;
+    
+}
+.crypto-info-table .crypto-info-header .info-24vol,
+.crypto-info-table .crypto-info-body .info-24vol{
+    padding-left: 40px;
+    white-space: nowrap;
+}
+.crypto-info-table .crypto-info-header .info-mrkt-cap,
+.crypto-info-table .crypto-info-body .info-mrkt-cap{
+    white-space: nowrap;
+    padding-left: 39px;
+}
+.crypto-info-table .crypto-info-header .info-prev-7d,
+.crypto-info-table .crypto-info-body .info-prev-7d{
+    text-align: center;
+    width: 20px;
+}
+.crypto-info-table .crypto-info-header .info-7d,
+.crypto-info-table .crypto-info-body .info-7d{
+    padding-left: 50px;
+    text-align: right;
+    width: 20px;
+}
+
+.crypto-info-table .crypto-info-body{
+    border-bottom: 1px solid rgb(109, 109, 109);
+}
+
+
+.crypto-info-table .crypto-info-body:hover{
+    background-color: rgba(109, 109, 109, 0.5);
+    transition: ease-in-out 0.3s;
+}
+.crypto-info-table .crypto-info-body td{text-align: right;}
+.crypto-info-table .crypto-info-body .add-to-watchlist{
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+/*item row finished */
+
+.dropdown-wrapper .connector{
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(104, 103, 103);
+    left: 35px;
+}
+
+.dropdown-wrapper .dropdown{
+    transition: ease-in-out 0.3s;
+    padding: 5px;
+    background-color: rgb(104, 103, 103);
+    border-radius: 7px;
+    width: 200px;
+    height: 200px;
+    max-height: 500px;
+    left: 40px;
+    top: 0;
+    overflow-y: scroll;
+    position: absolute;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    z-index: 99;
+}
+
+.dropdown-wrapper .dropdown::-webkit-scrollbar{
+    display: none;
+}
+
+.dropdown-wrapper .dropdown .dropdown-body .dropdown-item{
+    padding: 5px 0;
+    border-left: 2px solid rgb(104, 103, 103);
+}
+.dropdown-wrapper .dropdown .dropdown-body .dropdown-item:hover{
+    cursor: pointer;
+    background-color: rgb(123, 125, 129);
+    z-index: 1000;
+}
+
+
+.crypto-info-table .crypto-info-body .info-name .info-ticker{
+    margin-left: 30px;
+}
+
+
+
+.create-watchlist-form input{
+    margin-top: 15px;
+}
+
+.create-watchlist-form .new-watchlist-input{
+    height: 40px;
+    width: 300px;
+    padding: 10px;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    border: none;
+}
+.create-watchlist-form .new-watchlist-input:focus{
+    outline: none;
+}
+
+.create-watchlist-form .create-watchlist-btn{
+    padding: 10px 30px;
+    border: none;
+    background-color: rgb(32, 148, 32);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.create-watchlist-form .create-watchlist-btn:hover{
+    cursor: pointer;
+    background-color: rgba(32, 148, 32, 0.7);
+    transition: ease-in-out 0.3s;
+}

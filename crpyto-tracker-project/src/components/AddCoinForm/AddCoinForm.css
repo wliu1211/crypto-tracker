@@ -1,0 +1,82 @@
+.add-coin-form{
+    width: 100%;
+}
+
+.add-coin-form .search-coin-container{
+    margin: 0 20px;
+}
+
+.add-coin-form .search-coin-container input{
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    margin-right: 15px;
+}
+.add-coin-form .search-coin-container input:focus{
+    outline: none;
+}
+
+.add-coin-form .search-coin-container .coin-search-btn{
+    background-color: var(--secondary-bg);
+    color: white;
+}
+.add-coin-form .coin-results-container{
+    overflow-y: scroll;
+    max-height: 400px;
+    position: relative;
+    margin-top: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.add-coin-form .coin-results-container::-webkit-scrollbar{
+    display: none;
+}
+
+.add-coin-form .coin-results-container > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-coin-form .coin-results-container > div > div{
+    display: flex;
+}
+
+.coin-results-container .item-description-container{
+    margin: 10px 0 0;
+    position: sticky;
+    top: 0;
+    background-color: grey;
+    padding: 5px 10px;
+}
+
+.add-coin-form .coin-results-container > div .ticker-container{
+    width: 75px;
+    padding-left: 10px;
+    
+}
+.add-coin-form .coin-results-container > div .name-container{
+    width: 150px;
+    text-align: right;
+}
+
+.add-coin-form .coin-results-container > div .price-container{
+    width: 150px;
+    text-align: right;
+}
+.add-coin-form .coin-results-container > div .percent-container{
+    width: 180px;
+    text-align: right;
+    padding-right: 10px;
+    
+}
+
+.add-coin-form .coin-results-container .coin-item-container{
+    padding: 10px;
+}
+.add-coin-form .coin-results-container .coin-item-container:hover{
+    cursor: pointer;
+    background-color: rgba(107, 106, 106, 0.8);
+
+}
