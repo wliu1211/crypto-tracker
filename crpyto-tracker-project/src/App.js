@@ -26,13 +26,13 @@ const MainProvider = ({children}) => {
     cryptoService,
     selectedNavItem: 'market',
     setSelectedNavItem: (nav) => {
-      setAuthContext({...authContext, selectedNavItem: nav})
+      setMainContext({...mainContext, selectedNavItem: nav})
     },
   }
 
-  const [authContext, setAuthContext] = useState(context);
+  const [mainContext, setMainContext] = useState(context);
   return(
-    <MainContext.Provider value={authContext}>
+    <MainContext.Provider value={mainContext}>
       {children}
     </MainContext.Provider>
   )
